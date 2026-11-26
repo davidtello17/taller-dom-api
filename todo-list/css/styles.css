@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #d9bb50;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.todo {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.todo__icon {
+    font-size: 120px;
+    color: white;
+}
+
+.todo__title {
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+
+.todo__status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: white;
+    font-size: 14px;
+}
+
+.todo__status--online {
+    background-color: #2e7d32;
+}
+
+.todo__status--offline {
+    background-color: #8a6d00;
+}
+
+.todo__status--error {
+    background-color: #c62828;
+}
+
+.todo__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.todo__input {
+    width: 260px;
+    padding: 8px 4px;
+    border: none;
+    border-bottom: 2px solid #f7e08a;
+    background: transparent;
+    color: white;
+    font-size: 22px;
+    outline: none;
+}
+
+.todo__input::placeholder {
+    color: #f7e08a;
+}
+
+.todo__add {
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    color: #d9bb50;
+    font-size: 26px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.todo__add:hover {
+    transform: scale(1.1);
+}
+
+.todo__list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo__empty {
+    color: #f7e08a;
+    font-size: 18px;
+}
+
+.todo__counter {
+    color: #f7e08a;
+    font-size: 22px;
+    text-align: center;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.task__check {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.task__text {
+    flex: 1;
+    color: #4f4a7a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.task__edit-input {
+    flex: 1;
+    padding: 4px 8px;
+    border: 2px solid #d9bb50;
+    border-radius: 4px;
+    color: #4f4a7a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.task__button {
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.task__button:hover {
+    color: #d9bb50;
+}
+
+.task--done .task__text {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+@media (max-width: 480px) {
+    .todo__title {
+        font-size: 26px;
+    }
+
+    .todo__input {
+        width: 200px;
+        font-size: 18px;
+    }
+}

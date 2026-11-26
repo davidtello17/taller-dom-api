@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="todo">
+        <i class="fa-solid fa-clipboard-list todo__icon" aria-hidden="true"></i>
+        <h1 class="todo__title">javascript - to do list</h1>
+        <p class="todo__status" id="api-status" role="status">Conectando...</p>
+
+        <form class="todo__form" id="todo-form">
+            <input type="text" id="todo-input" class="todo__input" placeholder="escriba aquí su tarea..."
+                aria-label="Nueva tarea" required>
+            <button type="submit" class="todo__add" aria-label="Agregar tarea">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </form>
+
+        <ul class="todo__list" id="todo-list"></ul>
+        <p class="todo__empty" id="todo-empty">No hay tareas. ¡Agrega la primera!</p>
+
+        <p class="todo__counter">
+            Tareas pendientes: <span id="pending-count">0</span>
+            &nbsp;·&nbsp;
+            Completadas: <span id="completed-count">0</span>
+        </p>
+    </main>
+</body>
+
+</html>
