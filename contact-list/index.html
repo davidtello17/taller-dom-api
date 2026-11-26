@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <main class="contacts">
+        <i class="fa-solid fa-address-book contacts__icon" aria-hidden="true"></i>
+        <h1 class="contacts__title">Contact List</h1>
+        <p class="contacts__status" id="api-status" role="status">Conectando...</p>
+
+        <form class="contacts__form" id="contact-form">
+            <input type="text" id="name" class="contacts__input" placeholder="Input your name" aria-label="Name" required>
+            <input type="text" id="lastname" class="contacts__input" placeholder="Input your lastname" aria-label="Lastname" required>
+            <input type="tel" id="phone" class="contacts__input" placeholder="Input your phone" aria-label="Phone" required>
+            <input type="text" id="city" class="contacts__input" placeholder="Input your city" aria-label="City" required>
+            <input type="text" id="address" class="contacts__input" placeholder="Input your address" aria-label="Address" required>
+
+            <fieldset class="contacts__gender">
+                <legend class="contacts__legend">Gender</legend>
+                <label class="contacts__radio">
+                    <input type="radio" name="gender" value="Female" required> Female
+                </label>
+                <label class="contacts__radio">
+                    <input type="radio" name="gender" value="Male"> Male
+                </label>
+            </fieldset>
+
+            <div class="contacts__actions">
+                <button type="submit" id="submit-button" class="contacts__button">ADD</button>
+                <button type="button" id="cancel-button" class="contacts__button contacts__button--cancel" hidden>CANCEL</button>
+            </div>
+        </form>
+
+        <section class="contacts__list">
+            <h2 class="contacts__subtitle">Contacts (<span id="contacts-count">0</span>)</h2>
+            <div class="contacts__table-wrapper">
+                <table class="contacts__table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>City</th>
+                            <th>Address</th>
+                            <th>Gender</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contacts-body"></tbody>
+                </table>
+            </div>
+            <p class="contacts__empty" id="contacts-empty">No contacts yet. Add the first one!</p>
+        </section>
+    </main>
+</body>
+
+</html>
